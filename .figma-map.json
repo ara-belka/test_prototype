@@ -1,0 +1,723 @@
+{
+  "project": "coffee-bean",
+  "figma_file_key": "ejwbNoOJw4FAkmw28pBjFg",
+  "base_url": "http://127.0.0.1:3070",
+  "screenshot": {
+    "page_background": "#FFFFFF",
+    "breakpoints": {
+      "mobile": 360,
+      "tablet": 768,
+      "laptop": 1316,
+      "desktop": 1440,
+      "desktop_xl": 1920
+    },
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "default_theme": "light",
+    "theme_refs": {
+      "dark": {
+        "desktop_xl": "5269:19442"
+      }
+    }
+  },
+  "blocks": {
+    "BlockDocuments": {
+      "name": "Документы",
+      "description": "Секция с заголовком, описанием и списком файлов для скачивания.",
+      "vue_path": "app/components/article-blocks/document/ADocumentsList.vue",
+      "prop_type": "BlockDocumentsOut",
+      "figma_node_id": "2088:24946",
+      "variants": {
+        "base": {
+          "display_type": "base",
+          "figma_nodes": {
+            "desktop": "2088:24946",
+            "mobile": "2088:24946"
+          },
+          "fixture": {
+            "id": 999,
+            "type": "BlockDocuments",
+            "parent_id": 1,
+            "sort": 0,
+            "is_active": true,
+            "title": "Документы",
+            "display_type": "base",
+            "items": [
+              {
+                "id": 1,
+                "title": "Название файла",
+                "file": {
+                  "id": 101,
+                  "source": "/fixtures/docs/file1.pdf"
+                },
+                "file_name": "file1.pdf",
+                "file_extension": "pdf",
+                "file_size": 0,
+                "file_size_formatted": ""
+              },
+              {
+                "id": 2,
+                "title": "Название файла",
+                "file": {
+                  "id": 102,
+                  "source": "/fixtures/docs/file2.pdf"
+                },
+                "file_name": "file2.pdf",
+                "file_extension": "pdf",
+                "file_size": 0,
+                "file_size_formatted": ""
+              },
+              {
+                "id": 3,
+                "title": "Название файла",
+                "file": {
+                  "id": 103,
+                  "source": "/fixtures/docs/file3.pdf"
+                },
+                "file_name": "file3.pdf",
+                "file_extension": "pdf",
+                "file_size": 0,
+                "file_size_formatted": ""
+              }
+            ]
+          }
+        }
+      }
+    },
+    "BlockImageText": {
+      "name": "Текст + Изображение",
+      "description": "Блок с текстом и изображением сбоку. Варианты: изображение слева, изображение справа.",
+      "vue_path": "app/components/article-blocks/image-text/AImageText.vue",
+      "prop_type": "BlockTextImageSideOut",
+      "figma_node_id": "87:4766",
+      "variants": {
+        "image-right": {
+          "display_type": "left",
+          "figma_nodes": {
+            "desktop": "87:4781",
+            "mobile": "2079:16714"
+          },
+          "fixture": {
+            "id": 1001,
+            "type": "BlockTextImageSide",
+            "parent_id": 1,
+            "sort": 0,
+            "is_active": true,
+            "title": "display-2",
+            "text": "<p><b>Что такое Lorem Ipsum?</b></p><p><b>Lorem Ipsum</b> — это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>",
+            "display_type": "left",
+            "image": {
+              "id": 201,
+              "source": "fixture:checker"
+            },
+            "sticky_image": false
+          }
+        },
+        "image-left": {
+          "display_type": "right",
+          "figma_nodes": {
+            "desktop": "87:4766",
+            "mobile": "2079:16714"
+          },
+          "fixture": {
+            "id": 1002,
+            "type": "BlockTextImageSide",
+            "parent_id": 1,
+            "sort": 0,
+            "is_active": true,
+            "title": "display-2",
+            "text": "<p><b>Что такое Lorem Ipsum?</b></p><p><b>Lorem Ipsum</b> — это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>",
+            "display_type": "right",
+            "image": {
+              "id": 202,
+              "source": "fixture:checker"
+            },
+            "sticky_image": false
+          }
+        }
+      }
+    }
+  },
+  "layout": {
+    "header": {
+      "name": "Header",
+      "description": "Site chrome header — Figma page instances + DS component_variants",
+      "vue_path": "app/components/base/header/Header.vue",
+      "figma_nodes": {
+        "desktop_xl": "5171:17060",
+        "desktop": "5269:17636",
+        "laptop": "5269:15829",
+        "tablet": "5125:16852",
+        "mobile": "5090:7498"
+      },
+      "primary_node_id": "5171:17060",
+      "component_variants": {
+        "desktop": "5171:11172",
+        "medium": "5189:16562",
+        "compact": "5189:16577"
+      },
+      "mocks": {
+        "menus_file": ".figma/mocks/menus.json",
+        "configs_file": ".figma/mocks/configs.json",
+        "init_file": ".figma/mocks/init.json",
+        "note": "header_menu: 7× «Label» as in Figma; activated via render.api_mocks + cookie fallback"
+      },
+      "render": {
+        "mode": "page",
+        "url": "/",
+        "selector": "header.site-header",
+        "wait_for": "header.site-header",
+        "api_mocks": {
+          "**/n-api/init**": ".figma/mocks/init.json",
+          "**/api/init**": ".figma/mocks/init.json"
+        }
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "vue_path": "app/components/base/footer/Footer.vue",
+      "figma_nodes": {
+        "desktop_xl": "4747:18946",
+        "desktop": "5269:17638",
+        "laptop": "5269:15831",
+        "tablet": "4747:19103",
+        "mobile": "5090:7500"
+      },
+      "component_variants": {
+        "desktop-1920": "4747:18363",
+        "tablet": "4769:13081",
+        "mobile": "4769:13129"
+      },
+      "render": {
+        "mode": "page",
+        "url": "/",
+        "selector": "footer"
+      }
+    }
+  },
+  "ui": {},
+  "map_version": 2,
+  "inventory": {
+    "file_key": "ejwbNoOJw4FAkmw28pBjFg",
+    "canvas_node_id": "2017:13273",
+    "canvas_name": "page test ",
+    "generated_at": "2026-08-02T17:34:41.000Z",
+    "pages": {
+      "desktop_xl": {
+        "node_id": "4201:1358",
+        "width": 1920,
+        "name": "text page 1920",
+        "theme": "light"
+      },
+      "desktop": {
+        "node_id": "5269:17635",
+        "width": 1440,
+        "name": "text page 1440",
+        "theme": "light"
+      },
+      "laptop": {
+        "node_id": "5269:15828",
+        "width": 1316,
+        "name": "text page 1316",
+        "theme": "light"
+      },
+      "tablet": {
+        "node_id": "4495:12917",
+        "width": 768,
+        "name": "text page 768",
+        "theme": "light"
+      },
+      "mobile": {
+        "node_id": "5090:7497",
+        "width": 360,
+        "name": "text page 1921",
+        "theme": "light"
+      }
+    },
+    "theme_pages": {
+      "dark": {
+        "desktop_xl": {
+          "node_id": "5269:19442",
+          "width": 1920,
+          "name": "text page 1923",
+          "theme": "dark"
+        }
+      }
+    }
+  },
+  "scenes": {
+    "text-intro-button-01": {
+      "name": "Text · intro + button",
+      "content_tier": "L0",
+      "component": "BlockText",
+      "vue_path": "app/components/article-blocks/text/AText.vue",
+      "prop_type": "BlockText",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1682",
+      "inventory_order": 0,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1682",
+        "desktop": "I5269:17637;4201:8678;5269:17640",
+        "laptop": "I5269:15830;4201:8678;5269:15833",
+        "tablet": "I4495:12919;4201:8678;4495:12922",
+        "mobile": "I5090:7499;4201:8678;5090:7502"
+      },
+      "structure_hint": "Display + content + Button",
+      "fixture": {
+        "id": 9101,
+        "type": "BlockText",
+        "parent_id": 1,
+        "sort": 0,
+        "is_active": true,
+        "title": "display-2",
+        "text": "<p><strong>Что такое Lorem Ipsum?</strong></p><p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p><p>Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>"
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-intro-button-01.json"
+      },
+      "confirmed_by_human": {
+        "breakpoints": true
+      }
+    },
+    "image-video-loner-01": {
+      "name": "Image/Video · loner image",
+      "content_tier": "L0",
+      "component": "BlockMultiImage",
+      "vue_path": "app/components/article-blocks/multi-image/AMultiImage.vue",
+      "prop_type": "BlockMultiImageOut",
+      "display_type": "loner",
+      "primary_node_id": "I4201:8768;4201:8678;4568:9926",
+      "inventory_order": 7,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4568:9926",
+        "desktop": "I5269:17637;4201:8678;5269:17647",
+        "laptop": "I5269:15830;4201:8678;5269:15840",
+        "tablet": "I4495:12919;4201:8678;4568:9932",
+        "mobile": "I5090:7499;4201:8678;5090:7509"
+      },
+      "structure_hint": "Display + image",
+      "fixture": {
+        "id": 9102,
+        "type": "BlockMultiImage",
+        "parent_id": 1,
+        "sort": 0,
+        "is_active": true,
+        "title": "L0 image",
+        "display_type": "loner",
+        "items": [
+          {
+            "id": 1,
+            "image": {
+              "id": 301,
+              "source": "fixture:checker"
+            }
+          }
+        ]
+      },
+      "confirmed_by_human": {
+        "breakpoints": true
+      }
+    },
+    "cards-product-slider-01": {
+      "name": "Cards · product slider ×4",
+      "content_tier": "L0",
+      "component": "BlockSubPages",
+      "vue_path": "app/components/article-blocks/cards/ACards.vue",
+      "prop_type": "BlockSubPagesOut",
+      "primary_node_id": "I4201:8768;4201:8678;4652:12030",
+      "inventory_order": 25,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4652:12030",
+        "desktop": "I5269:17637;4201:8678;5269:17647",
+        "laptop": "I5269:15830;4201:8678;5269:15840",
+        "tablet": "I4495:12919;4201:8678;4568:9932",
+        "mobile": "I5090:7499;4201:8678;5090:7527"
+      },
+      "structure_hint": "slider×4 card-product",
+      "items_count": 4,
+      "fixture": {
+        "id": 9103,
+        "type": "BlockSubPages",
+        "parent_id": 1,
+        "sort": 0,
+        "is_active": true,
+        "title": "L0 product cards",
+        "pages_count": 4,
+        "page": {
+          "id": 1,
+          "slug": "catalog",
+          "title": "Catalog"
+        },
+        "subpages": [
+          {
+            "id": 11,
+            "slug": "product-1",
+            "partial_slug": "product-1",
+            "title": "Product 1",
+            "preview_text": "L0 card",
+            "image": {
+              "id": 401,
+              "source": "fixture:checker"
+            }
+          },
+          {
+            "id": 12,
+            "slug": "product-2",
+            "partial_slug": "product-2",
+            "title": "Product 2",
+            "preview_text": "L0 card",
+            "image": {
+              "id": 402,
+              "source": "fixture:checker"
+            }
+          },
+          {
+            "id": 13,
+            "slug": "product-3",
+            "partial_slug": "product-3",
+            "title": "Product 3",
+            "preview_text": "L0 card",
+            "image": {
+              "id": 403,
+              "source": "fixture:checker"
+            }
+          },
+          {
+            "id": 14,
+            "slug": "product-4",
+            "partial_slug": "product-4",
+            "title": "Product 4",
+            "preview_text": "L0 card",
+            "image": {
+              "id": 404,
+              "source": "fixture:checker"
+            }
+          }
+        ]
+      },
+      "confirmed_by_human": {
+        "breakpoints": true
+      }
+    },
+    "text-01": {
+      "name": "Text · 3 columns",
+      "content_tier": "L0",
+      "component": "BlockTextColumns",
+      "vue_path": "app/components/article-blocks/text-cols/ATextCols.vue",
+      "prop_type": "BlockTextColumns",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1715",
+      "inventory_order": 1,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1715",
+        "desktop": "I5269:17637;4201:8678;5269:17641",
+        "laptop": "I5269:15830;4201:8678;5269:15834",
+        "tablet": "I4495:12919;4201:8678;4495:12923",
+        "mobile": "I5090:7499;4201:8678;5090:7503"
+      },
+      "structure_hint": "columns-grid[column-item[Display+Title+Text]×3]",
+      "fixture": {
+        "id": 9001,
+        "type": "BlockTextColumns",
+        "parent_id": 1,
+        "sort": 1,
+        "is_active": true,
+        "items": [
+          {
+            "id": 1,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          },
+          {
+            "id": 2,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          },
+          {
+            "id": 3,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          }
+        ]
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-01.json"
+      },
+      "status": "draft",
+      "confirmed_by_human": {
+        "component": true,
+        "props": false,
+        "breakpoints": true
+      },
+      "notes": "Figma 3 col; ATextCols lg:max 2 col — possible layout gap"
+    },
+    "text-03": {
+      "name": "Text · display + numbered list",
+      "content_tier": "L0",
+      "component": "BlockText",
+      "vue_path": "app/components/article-blocks/text/AText.vue",
+      "prop_type": "BlockText",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1752",
+      "inventory_order": 3,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1752",
+        "desktop": "I5269:17637;4201:8678;5269:17643",
+        "laptop": "I5269:15830;4201:8678;5269:15836",
+        "tablet": "I4495:12919;4201:8678;4495:12925",
+        "mobile": "I5090:7499;4201:8678;5090:7505"
+      },
+      "structure_hint": "Display[Display-text]+numbered-list[list-item×3]",
+      "fixture": {
+        "id": 9003,
+        "type": "BlockText",
+        "parent_id": 1,
+        "sort": 3,
+        "is_active": true,
+        "title": "display-2",
+        "text": "<ol>\n<li>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</li>\n<li>При создании генератора мы использовали небезизвестный универсальный код речей.</li>\n<li>Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</li>\n</ol>"
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-03.json"
+      },
+      "status": "draft",
+      "confirmed_by_human": {
+        "component": true,
+        "props": false,
+        "breakpoints": true
+      },
+      "notes": "Список — HTML <ol> внутри text; отдельного block type нет"
+    },
+    "text-04": {
+      "name": "Text · display + bullet list",
+      "content_tier": "L0",
+      "component": "BlockText",
+      "vue_path": "app/components/article-blocks/text/AText.vue",
+      "prop_type": "BlockText",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1772",
+      "inventory_order": 4,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1772",
+        "desktop": "I5269:17637;4201:8678;5269:17644",
+        "laptop": "I5269:15830;4201:8678;5269:15837",
+        "tablet": "I4495:12919;4201:8678;4495:12926",
+        "mobile": "I5090:7499;4201:8678;5090:7506"
+      },
+      "structure_hint": "Display[Display-text]+bullet-list[list-item×3]",
+      "fixture": {
+        "id": 9004,
+        "type": "BlockText",
+        "parent_id": 1,
+        "sort": 4,
+        "is_active": true,
+        "title": "display-2",
+        "text": "<ul>\n<li>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</li>\n<li>При создании генератора мы использовали небезизвестный универсальный код речей.</li>\n<li>Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</li>\n</ul>"
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-04.json"
+      },
+      "status": "draft",
+      "confirmed_by_human": {
+        "component": true,
+        "props": false,
+        "breakpoints": true
+      },
+      "notes": "Маркированный список — HTML <ul> внутри text; markers tabler/point-fill → CSS list-style"
+    },
+    "text-05": {
+      "name": "Text · spoiler accordion ×3",
+      "content_tier": "L0",
+      "component": "BlockSpoiler",
+      "vue_path": "app/components/article-blocks/spoiler/ASpoilerList.vue",
+      "prop_type": "BlockSpoilerOut",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1854",
+      "inventory_order": 5,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1854",
+        "desktop": "I5269:17637;4201:8678;5269:17645",
+        "laptop": "I5269:15830;4201:8678;5269:15838",
+        "tablet": "I4495:12919;4201:8678;4495:12927",
+        "mobile": "I5090:7499;4201:8678;5090:7507"
+      },
+      "structure_hint": "Display+heading-and-description+accordion-list[card-accordion×3]",
+      "fixture": {
+        "id": 9005,
+        "type": "BlockSpoiler",
+        "parent_id": 1,
+        "sort": 5,
+        "is_active": true,
+        "title": "Скрытый Текст (“Спойлер“)",
+        "text": "<p><strong>Что такое Lorem Ipsum?</strong></p><p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>",
+        "items": [
+          {
+            "id": 1,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          },
+          {
+            "id": 2,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          },
+          {
+            "id": 3,
+            "title": "Что такое Lorem Ipsum?",
+            "text": "<p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+          }
+        ]
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-05.json"
+      },
+      "status": "draft",
+      "confirmed_by_human": {
+        "component": true,
+        "props": false,
+        "breakpoints": true
+      },
+      "notes": "Не BlockText. title=Display, text=intro, items=3 accordion. display_type нет."
+    },
+    "text-06": {
+      "name": "Text · documents list ×3",
+      "content_tier": "L0",
+      "component": "BlockDocuments",
+      "vue_path": "app/components/article-blocks/document/ADocumentsList.vue",
+      "prop_type": "BlockDocumentsOut",
+      "primary_node_id": "I4201:8768;4201:8678;4510:1921",
+      "inventory_order": 6,
+      "figma_nodes": {
+        "desktop_xl": "I4201:8768;4201:8678;4510:1921",
+        "desktop": "I5269:17637;4201:8678;5269:17646",
+        "laptop": "I5269:15830;4201:8678;5269:15839",
+        "tablet": "I4495:12919;4201:8678;4495:12928",
+        "mobile": "I5090:7499;4201:8678;5090:7508"
+      },
+      "structure_hint": "Display+heading-and-description+document-list[card-document×3]",
+      "display_type": "base",
+      "fixture": {
+        "id": 9006,
+        "type": "BlockDocuments",
+        "parent_id": 1,
+        "sort": 6,
+        "is_active": true,
+        "title": "Документы",
+        "display_type": "base",
+        "items": [
+          {
+            "id": 1,
+            "title": "Название файла",
+            "file": {
+              "id": 100,
+              "source": "/fixtures/docs/file1.pdf"
+            },
+            "file_name": "Название файла.pdf",
+            "file_extension": "pdf",
+            "file_size": 0,
+            "file_size_formatted": ""
+          },
+          {
+            "id": 2,
+            "title": "Название файла",
+            "file": {
+              "id": 101,
+              "source": "/fixtures/docs/file2.pdf"
+            },
+            "file_name": "Название файла.pdf",
+            "file_extension": "pdf",
+            "file_size": 0,
+            "file_size_formatted": ""
+          },
+          {
+            "id": 3,
+            "title": "Название файла",
+            "file": {
+              "id": 102,
+              "source": "/fixtures/docs/file3.pdf"
+            },
+            "file_name": "Название файла.pdf",
+            "file_extension": "pdf",
+            "file_size": 0,
+            "file_size_formatted": ""
+          }
+        ],
+        "text": "<p><strong>Что такое Lorem Ipsum?</strong></p><p>Lorem Ipsum — это текст-“рыба“, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>"
+      },
+      "render": {
+        "mode": "fixture",
+        "fixture_file": ".figma/fixtures/text-06.json"
+      },
+      "status": "draft",
+      "confirmed_by_human": {
+        "component": true,
+        "props": false,
+        "breakpoints": true
+      },
+      "notes": "display_type=base (список файлов). embedding=PDF slider. CMS BlockDocuments без text — intro Title/Text из Figma в title не полностью укладывается; L0: title=Display, 3 items."
+    },
+    "header": {
+      "name": "Header",
+      "description": "Site chrome header — Figma page instances + DS component_variants",
+      "vue_path": "app/components/base/header/Header.vue",
+      "component": "Header",
+      "content_tier": "chrome",
+      "figma_nodes": {
+        "desktop_xl": "5171:17060",
+        "desktop": "5269:17636",
+        "laptop": "5269:15829",
+        "tablet": "5125:16852",
+        "mobile": "5090:7498"
+      },
+      "primary_node_id": "5171:17060",
+      "render": {
+        "mode": "page",
+        "url": "/",
+        "selector": "header.site-header",
+        "wait_for": "header.site-header",
+        "api_mocks": {
+          "**/n-api/init**": ".figma/mocks/init.json",
+          "**/api/init**": ".figma/mocks/init.json"
+        }
+      },
+      "mocks": {
+        "menus_file": ".figma/mocks/menus.json",
+        "configs_file": ".figma/mocks/configs.json",
+        "init_file": ".figma/mocks/init.json",
+        "note": "header_menu: 7× «Label» as in Figma; activated via render.api_mocks + cookie fallback"
+      },
+      "component_variants": {
+        "desktop": "5171:11172",
+        "medium": "5189:16562",
+        "compact": "5189:16577"
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "description": "layout chrome: footer",
+      "vue_path": "app/components/base/footer/Footer.vue",
+      "component": "Footer",
+      "content_tier": "chrome",
+      "figma_nodes": {
+        "desktop_xl": "4747:18946",
+        "desktop": "5269:17638",
+        "laptop": "5269:15831",
+        "tablet": "4747:19103",
+        "mobile": "5090:7500"
+      },
+      "primary_node_id": "4747:18946",
+      "render": {
+        "mode": "page",
+        "url": "/",
+        "selector": "footer"
+      },
+      "component_variants": {
+        "desktop-1920": "4747:18363",
+        "tablet": "4769:13081",
+        "mobile": "4769:13129"
+      }
+    }
+  }
+}

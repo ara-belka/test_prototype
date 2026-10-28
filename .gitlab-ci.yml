@@ -1,0 +1,36 @@
+stages:
+  - deploy
+
+SYNC_TOKENS:
+  stage: deploy
+  when: manual
+  only:
+    - feature/108382/figma-update
+  tags:
+    - deploy
+  variables:
+    PKG_MANAGER: pnpm@9
+  script:
+    - sudo -H -E ~/scripts/deploy/sync_figma_tokens.sh
+
+DEPLOY_TEST:
+  stage: deploy
+  when: manual
+  only:
+    - feature/108382/figma-update
+  tags:
+    - deploy
+    - servertest
+    - html
+  environment:
+    name: SERVERTEST
+  variables:
+    SERVERTEST_USER: servertest
+    SERVERTEST_DOMAIN: coffee-prototype-nuxt.servertest.pro
+    GIT_BRANCH: feature/108382/figma-update
+    PKG_MANAGER: pnpm@9
+
+  script:
+    - sudo -H -E ~/scripts/deploy/deploy_nuxt.sh
+    - sudo -H -E ~/scripts/deploy/supervisor_stop.sh
+    - sudo -H -E ~/scripts/deploy/supervisor_start.sh

@@ -1,0 +1,53 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+.lighthouseci
+
+# Node dependencies
+node_modules
+.pnpm-store
+
+# Package manager artifacts
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Mise local overrides
+.mise.local.toml
+mise.local.toml
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+.agent
+.vscode
+
+# Design verification (generated locally)
+.screenshots
+.ds-audit
+.figma/**
+!.figma/mocks/
+!.figma/mocks/**
+!.figma/fixtures/
+!.figma/fixtures/**
+
+
+# Klaux token dumps (optional bulk; DTCG JSON in figma-input/ is enough)
+figma-input/klaux-export.json
+figma-input/*.zip
+downloads/
+.task-context.md

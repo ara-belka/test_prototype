@@ -1,0 +1,31 @@
+{
+  "project": "coffee-bean",
+  "servertest": "coffee-prototype.servertest.pro",
+  "crm_client_id": 1285,
+  "figma_file_key": "ejwbNoOJw4FAkmw28pBjFg",
+  "gitlab_project": "coffeestudio/coffee-bean-v2",
+  "backends": [
+    {
+      "id": 1285
+    }
+  ],
+  "hosts": [
+    {
+      "env": "dev",
+      "domain": "coffee-prototype.servertest.pro"
+    }
+  ],
+  "figma": [
+    {
+      "key": "ejwbNoOJw4FAkmw28pBjFg"
+    }
+  ],
+  "api": [
+    {
+      "gitlab": {
+        "path": "coffeestudio/coffee-front-swagger"
+      },
+      "schema": "https://coffee-prototype.servertest.pro/api/schema.yaml"
+    }
+  ]
+}
